@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI Variable", "Trebuchet MS", sans-serif;
+  --font-heading: "Arial Nova", "Segoe UI Variable", sans-serif;
+  --text-tiny: 11px;
+  --radius-soft: 1.5rem;
+  --radius-card: 1.75rem;
+  --radius-panel: 2rem;
+}
+
+:root {
+  --color-cream: #f7f0e8;
+  --color-panel: #fff7f0;
+  --color-ink: #1f1a17;
+  --color-muted: #6e6258;
+  --color-border: #dccfc3;
+  --color-accent: #ba5a2a;
+  --color-accent-dark: #95431a;
+  --color-forest: #203a31;
+  --color-forest-deep: #1f312b;
+  --color-sand: #f0dfce;
+  --shadow-focus: 0 0 0 3px rgba(186, 90, 42, 0.18);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 30%),
+    linear-gradient(180deg, #f6eee5 0%, #f7f0e8 48%, #efe6dc 100%);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  box-shadow: var(--shadow-focus);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.tracking-brand {
+  letter-spacing: 0.18em;
+}
+
+.tracking-eyebrow {
+  letter-spacing: 0.24em;
+}
+
+.tracking-pill {
+  letter-spacing: 0.28em;
+}
+
+.text-display {
+  text-wrap: balance;
+  letter-spacing: -0.04em;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.section-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.5rem;
+}
+
+.section-space {
+  padding-block: 2.75rem;
+}
+
+.section-gap {
+  gap: 1.5rem;
+}
+
+.section-intro {
+  margin-bottom: 2.25rem;
+}
+
+.card-surface {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.stack-copy > * + * {
+  margin-top: 0.8rem;
+}
+
+.hero-copy {
+  max-width: 40rem;
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.55rem 1rem;
+}
+
+.metric-number {
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.product-actions {
+  margin-top: 1rem;
+}
+
+.aspect-product {
+  aspect-ratio: 4 / 5;
+}
+
+.surface-product {
+  background: linear-gradient(160deg, #dbe7e1, #f6e5d5);
+}
+
+.shadow-float {
+  box-shadow: 0 24px 80px -40px rgba(0, 0, 0, 0.35);
+}
+
+.shadow-float-strong {
+  box-shadow: 0 24px 80px -40px rgba(0, 0, 0, 0.45);
+}
+
+.button-primary,
+.button-secondary,
+.button-inverse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-inverse:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--color-accent-dark);
+}
+
+.button-secondary {
+  border: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.button-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button-inverse {
+  background: white;
+  color: var(--color-forest);
+}
+
+.button-inverse:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.button-chip {
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.button-chip:hover {
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 2.5rem;
+  }
+
+  .section-space {
+    padding-block: 3.5rem;
+  }
+
+  .section-intro {
+    margin-bottom: 2.75rem;
+  }
+
+  .layout-benefits {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .layout-hero {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .layout-sidebar {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .layout-product-detail {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+}
+
