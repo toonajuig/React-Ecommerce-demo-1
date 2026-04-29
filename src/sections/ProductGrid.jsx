@@ -1,14 +1,15 @@
-import { Link } from 'react-router-dom'
-import SectionHeading from '../components/SectionHeading'
-import { useCart } from '../context/useCart'
+import { Link } from "react-router-dom";
+import SectionHeading from "../components/SectionHeading";
+import { useCart } from "../context/useCart";
 
 function ProductGrid({ featuredProducts, eyebrow, title, emptyMessage }) {
-  const { addToCart } = useCart()
+  const { addToCart } = useCart();
   const resolvedEmptyMessage =
-    emptyMessage ?? 'This section is ready for products as soon as catalog data is available.'
+    emptyMessage ??
+    "This section is ready for products as soon as catalog data is available.";
 
   return (
-    <section id="shop" className="section-shell section-space !pt-0">
+    <section id="shop" className="section-shell section-space pt-0!">
       <div className="section-intro flex items-end justify-between gap-4">
         <SectionHeading
           eyebrow={eyebrow}
@@ -81,8 +82,7 @@ function ProductGrid({ featuredProducts, eyebrow, title, emptyMessage }) {
         </div>
       )}
     </section>
-  )
+  );
 }
 
-export default ProductGrid
-
+export default ProductGrid;
